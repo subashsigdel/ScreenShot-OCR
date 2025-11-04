@@ -19,7 +19,8 @@ class ScreenshotHandler(FileSystemEventHandler):
 
         if not event.src_path.lower().endswith((".png", ".jpg", ".jpeg")):
             return
-
+            # Wait a bit to ensure file is fully written
+        time.sleep(1)
         print(f"New screenshot detected: {event.src_path}")
         self.send_to_api(event.src_path)
 

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pytesseract
+Pillow
+pymongo
+python-dotenv
+watchdog
+requests

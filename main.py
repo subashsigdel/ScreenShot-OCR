@@ -45,7 +45,7 @@ async def upload_image(
         raise HTTPException(status_code=400, detail="User not registered")
 
     # Predictable filename
-    unique_filename = f"{username}_{file.filename}.png"
+    unique_filename = f"{username}_{file.filename}"
     file_path = os.path.join("Images/Saved_images", unique_filename)
 
     # Save image
